@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Maximillian</title>
+	<style>
+      @keyframes fly {
+        0% {transform: translate(-900px, 200px) scale(0.8, 0.8);}
+        2% {transform: translate(-800px, 200px) scale(0.8, 0.8); filter: invert(100%);}
+        
+        100% {transform: translate(600px, 200px) scale(0, 0); filter: invert(0%);}
+      }
+
+/*      @keyframes colorShift {
+      	from {filter: invert(0%);}
+      	to {filter: invert(100%);}
+      }*/
+
+      .birds {
+        animation-name: fly;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+
+    
+		body {
+			background-image: url('images/city.jpg');
+			background-color: indigo;
+			background-size: 100%;
+			background-position: center;
+			}
+
+		html, body {margin: 0; height: 100%; overflow: hidden}
+
+		.Template {
+			background-color: black;
+			width: 3900px;
+			height: 2700px;
+		}
+
+        .shell {
+		position:absolute;
+		left: 0px;
+		bottom: -70px;
+		max-height: 100vh;
+		max-width: 100%;
+		width: inherit;
+		display: flex;
+		margin: center;
+		z-index: 1;
+	}
+		.curtain {
+		position:absolute;
+		top: 0px;
+		left: -150px;
+		right: 150px;
+		z-index: 2;
+		max-height: 120vh;
+		max-width: 120%
+	}
+
+/*	.birds {
+		position: absolute;
+		top: 250px;
+		left: -150px;
+		max-height: 50%;
+		max-width: 50%;
+	}
+
+	#bird {
+		max-width: 70%;
+		max-height: 70%;
+		filter: invert(100%);
+		transform: scale(1.2, 1.2);
+		transition-property: transform;
+       	transition-duration: 1s;
+	}*/
+
+    .idk {
+    	width: 50px;
+    	height: 50px;
+    	left: 240px;
+    	top: 240px;
+    	position: absolute;
+    	z-index: 3;
+    }
+
+    .idk2 {
+    	width: 50px;
+    	height: 50px;
+    	right: 380px;
+    	top: 240px;
+    	margin: 0;
+    	position: absolute;
+    	z-index: 3;
+    }
+
+    @keyframes Welcome {
+    	0% {transform: translate(-200px, 100px);}
+    	100% {transform: translate(420px, 100px);}
+    }
+
+    .textDiv {
+    	animation-name: Welcome;
+    	animation-duration: 4s;
+    	animation-delay: 5s;
+    	animation-fill-mode: forwards;
+    	position: absolute;
+    	width: 150px;
+    	height: 80px;
+    	left: -150px;
+    	background-color: beige;
+    	z-index: 4;
+    	text-align: center;
+    	padding-top: 10px;
+    }
+
+     
+
+       
+
+        
+	</style>
+</head>
+<body>
+
+
+<img src="images/shell3.png" class="shell" >
+<img src="images/curtains.png" class="curtain">
+
+<div class="birds" id="birdy">
+	<img src="images/birds.gif" id="bird">
+</div> 
+
+<div class="idk">
+<img src="images/flame.gif" width="200px" height="200px">
+</div>
+<div class="idk2">
+<img src="images/flame.gif" width="200px" height="200px">
+</div>
+
+<div class="textDiv">Welcome to the Maximillian Schneider ~Virtual Museum~   <a href="../ImageSite/index.html">Begin tour</a></div>
+
+
+</body>
+</html>

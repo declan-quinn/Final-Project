@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image Opacity</title>
+    <style>
+      .overlay{
+        opacity:0.8;
+        position:fixed;
+        width:100%;
+        height:100%;
+        top:0px;
+        left:0px;
+        z-index: -1;
+}
+      .backie{
+        min-height: 100%;
+        min-width: 1024px;
+
+        width: 100%;
+        height: auto;
+  
+        position: fixed;
+        top: 0;
+        left: 0;
+}
+        
+
+      }
+
+      @keyframes zoomBig {
+        0% {opacity: 0.5;}
+        100% {transform: scale(5.3, 5.3) translate(150px, -100px); opacity: 1;}
+      }
+
+      @keyframes colorShift {
+        0% {filter: drop-shadow(0px 0px 0px midnightblue) invert(0%);}
+        100% {filter: drop-shadow(5px 5px 5px midnightblue) invert(100%);}
+      }
+
+      #contL1 {
+        width: 140px;
+        left: 10px;
+        margin-top: 60px;
+
+      }
+
+      #contR1{
+        width: 140px;
+        right: 10px;
+      }
+
+
+      img:hover {
+        animation-name: colorShift;
+        animation-duration: 5s;
+        animation-delay: 4s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
+      img.cont1:hover {
+        transform: scale(5.3, 5.3) translate(100px, 35px);
+        opacity: 0.7;
+      }
+
+      img.cont2:hover {
+        transform: scale(5.3, 5.3) translate(100px, 23px);
+        opacity: 0.7;
+      }
+
+      img.cont3:hover {
+        transform: scale(5.3, 5.3) translate(100px, 11px);
+        opacity: 0.7;
+      }
+
+      img.cont4:hover {
+        transform: scale(5.3, 5.3) translate(100px, 0px);
+        opacity: 0.7;
+      }
+
+      img.cont5:hover {
+        transform: scale(5.3, 5.3) translate(100px, -14px);
+        opacity: 0.7;
+      }
+
+      img.cont6:hover {
+        transform: scale(5.3, 5.3) translate(100px, -27px);
+        opacity: 0.7;
+      }
+
+      img.cont7:hover {
+        transform: scale(5.3, 5.3) translate(100px, -40px);
+        opacity: 0.7;
+
+      }
+
+      img {
+        transition-property: transform;
+        transition-duration: 1s;
+        float: left;
+        margin: 1px;
+        top: 100px;
+      }
+
+      .audioDiv {
+        position: absolute;
+        top: 5px;
+        opacity: 0;
+      }
+
+      .audioDiv:hover {
+        opacity: 1;
+      }
+
+      .cont1, .cont2, .cont3, .cont4, .cont5, .cont6, .cont7 {
+        opacity: 0.4;
+
+      }
+
+      .next {
+        width: 80px;
+        height: 20px;
+        background-color: white;
+        opacity: 0.05;
+        position: absolute;
+        z-index: 4;
+        right: 5%;
+        top: 14%;
+        text-align: center;
+
+      }
+
+      .next:hover {
+        opacity: 0.8;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="overlay">
+      <img src="background.png" class="backie">
+    </div>
+    <div class="audioDiv">
+    <audio controls volume="0.3" class="audiYo">
+      <source src="grampa.m4a">
+      <source src="grampa.mp3">
+    </audio>
+    </div>
+
+    <div id="contL1">
+      <img class="cont1" src="img5.png" width="135" height="75">
+      <img class="cont2" src="img1.png" width="135" height="75">
+      <img class="cont3" src="img2.png" width="135" height="75">
+      <img class="cont4" src="img3.png" width="135" height="75">
+      <img class="cont5" src="img4.png" width="135" height="75">
+      <img class="cont6" src="img6.png" width="135" height="75">
+      <img class="cont7" src="img7.png" width="135" height="75">
+    </div>
+
+    <div class="next"><a href="../EmpireState/index.html">The Exhibit</a></div>
+
+  </body>
+</html>
